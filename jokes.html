@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <title>RandoAPI</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand-title">Podge's Lodge of Hodge Podge</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Art</a></li>
+          <li><a href="jokes.html">Jokes</a></li>
+          <li><a href="cocktail.html">Cocktails</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="card">
+      <div class="container">
+        <h4><b>Random Joke!</b></h4>
+        <button id="jokeBtn">Click me for a random joke!</button>
+        <p id="joke-display"></p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      const jokeBtn = document.getElementById("jokeBtn");
+      jokeBtn.addEventListener("click", getMoreJokes);
+    </script>
+    <body onload="getMoreJokes()"></body>
+  </body>
+</html>
