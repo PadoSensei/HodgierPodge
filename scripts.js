@@ -39,6 +39,9 @@ const canal_btn = document
   .getElementById("canal_btn")
   .addEventListener("click", canalPics);
 
+const rock_btn = document
+  .getElementById("rock_btn")
+  .addEventListener("click", rockPics);
 //
 function gardenPics() {
   const currentPic = document.getElementById("current");
@@ -78,15 +81,27 @@ function canalPics() {
   const currentPic = document.getElementById("current");
   currentPic.src = "./Art/Canal_Orig.jpeg";
   removeGallery();
-  //canal_pics.forEach((element) => {
-  //createGalleryImage(element);
+  canal_pics.forEach((element) => {
+    createGalleryImage(element);
+  });
 }
 
 function swanPics() {
   const currentPic = document.getElementById("current");
   currentPic.src = "./Art/Swan_Orig.jpeg";
   removeGallery();
-  // run your function on swan_pics
+  swan_pics.forEach((element) => {
+    createGalleryImage(element);
+  });
+}
+
+function rockPics() {
+  const currentPic = document.getElementById("current");
+  currentPic.src = "./Art/Rock_Orig.jpeg";
+  removeGallery();
+  rock_pics.forEach((element) => {
+    createGalleryImage(element);
+  });
 }
 
 const vase_pics = [
@@ -100,7 +115,12 @@ const vase_pics = [
   "./Art/Vase_Orig.jpeg",
 ];
 
-const swan_pics = ["swan_Orig.jpeg"];
+const swan_pics = [
+  "./Art/Swan_Orig.jpeg",
+  "./Art/Swan_Dad.jpeg",
+  "./Art/Swan_Maria.jpeg",
+  "./Art/Swan_P.jpeg",
+];
 
 const coast_pics = [
   "./Art/Coast_Dad.jpeg",
@@ -121,9 +141,16 @@ const garden_pics = [
 ];
 
 const canal_pics = [
-  "./Art/Canal_Dad.jpeg",
-  "./Art/Canal_Maria.jpeg",
+  "./Art/Canal_Orig.jpeg",
   "./Art/Canal_Steve.jpeg",
+  "./Art/Canal_Maria.jpeg",
+  "./Art/Canal_Dad.jpeg",
+];
+
+const rock_pics = [
+  "./Art/Rock_Dad.jpeg",
+  "./Art/Rock_Maria.jpeg",
+  "./Art/Rock_Orig.jpeg",
 ];
 
 function removeGallery() {
