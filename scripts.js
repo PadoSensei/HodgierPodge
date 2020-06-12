@@ -117,7 +117,7 @@ const vase_pics = [
 
 const swan_pics = [
   "./Art/Swan_Orig.jpeg",
-  "./Art/Swan_Dad.jpeg",
+  "Swan_Dad_1.jpeg",
   "./Art/Swan_Maria.jpeg",
   "./Art/Swan_P.jpeg",
 ];
@@ -261,4 +261,47 @@ async function getDrink() {
     ingredients.innerText = measureList[x] + ": " + ingredList[x];
     document.getElementById("cocktail-display").appendChild(ingredients);
   }
+}
+
+// Speech Recognition
+
+function record() {
+  let recognition = new webkitSpeechRecognition();
+  recognition.lang = "en-GB";
+
+  recognition.onresult = function (event) {
+    console.log(event);
+
+    let command = event.results[0][0].transcript;
+    console.log(command);
+    if (command.toLowerCase() === "art") {
+      console.log("he agrees");
+      window.location.href = "gallery.html";
+    } else if (command.toLowerCase() === "jokes") {
+      window.location.href = "jokes.html";
+    } else if (command.toLowerCase() === "cocktail") {
+      window.location.href = "cocktail.html";
+    }
+  };
+  recognition.start();
+}
+
+function recordArt() {
+  let recognition = new webkitSpeechRecognition();
+  recognition.lang = "en-GB";
+
+  recognition.onresult = function (event) {
+    console.log(event);
+
+    let command = event.results[0][0].transcript;
+    console.log(command);
+    if (command.toLowerCase() === "the swan") {
+      swanPics();
+    } else if (command.toLowerCase() === "the rock") {
+      rockPics();
+    } else if (command.toLowerCase() === "the canal") {
+      canalPics();
+    }
+  };
+  recognition.start();
 }
