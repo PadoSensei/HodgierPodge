@@ -42,6 +42,10 @@ const canal_btn = document
 const rock_btn = document
   .getElementById("rock_btn")
   .addEventListener("click", rockPics);
+
+const sunset_btn = document
+  .getElementById("sunset_btn")
+  .addEventListener("click", sunsetPics);
 //
 function gardenPics() {
   const currentPic = document.getElementById("current");
@@ -104,6 +108,15 @@ function rockPics() {
   });
 }
 
+function sunsetPics() {
+  const currentPic = document.getElementById("current");
+  currentPic.src = "./Art/Sunset_Orig.jpeg";
+  removeGallery();
+  sunset_pics.forEach((element) => {
+    createGalleryImage(element);
+  });
+}
+
 const vase_pics = [
   "./Art/Vase_Dad.jpeg",
   "./Art/Vase_Kates.jpeg",
@@ -151,6 +164,15 @@ const rock_pics = [
   "./Art/Rock_Dad.jpeg",
   "./Art/Rock_Maria.jpeg",
   "./Art/Rock_Orig.jpeg",
+];
+
+const sunset_pics = [
+  "./Art/Sunset_Dad.jpeg",
+  "./Art/Sunset_Kates.jpeg",
+  "./Art/Sunset_Maria.jpeg",
+  "./Art/Sunset_Orig.jpeg",
+  "./Art/Sunset_Steve.jpeg",
+  "./Art/Sunset_P.jpeg",
 ];
 
 function removeGallery() {
