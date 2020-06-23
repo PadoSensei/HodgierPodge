@@ -192,6 +192,7 @@ const cottage_pics = [
   "./Art/cottage_dad.jpeg",
   "./Art/cottage_maria.jpeg",
   "./Art/cottage_steve.jpeg",
+  "./Art/cottage_P.jpg",
   "./Art/cottage_orig.jpg",
 ];
 
