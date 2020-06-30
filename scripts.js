@@ -50,7 +50,21 @@ const sunset_btn = document
 const cottage_btn = document
   .getElementById("cottage_btn")
   .addEventListener("click", cottagePics);
+
+const cathedral_btn = document
+  .getElementById("cathedral_btn")
+  .addEventListener("click", catherdralPics);
+
 //
+function catherdralPics() {
+  const currentPic = document.getElementById("current");
+  currentPic.src = "./Art/Cathedral_Orig.jpeg";
+  removeGallery();
+  cathedral_pics.forEach((element) => {
+    createGalleryImage(element);
+  });
+}
+
 function gardenPics() {
   const currentPic = document.getElementById("current");
   currentPic.src = "./Art/Seat_Orig.jpeg";
@@ -194,6 +208,12 @@ const cottage_pics = [
   "./Art/cottage_steve.jpeg",
   "./Art/cottage_P.jpg",
   "./Art/cottage_orig.jpg",
+];
+
+const cathedral_pics = [
+  "./Art/Catherdal_Dad.jpeg",
+  "./Art/Cathedral_Maria.jpeg",
+  "./Art/Cathedral_Orig.jpeg",
 ];
 
 function removeGallery() {
